@@ -1,0 +1,92 @@
+    
+        //     const input = {
+        //         "first_Name" : "Raghvendra",
+        //         // "Middle_Name"  : "Singh",
+        //         "LastName"     : "Chandel",
+        //         "Nick_Name"    : "Raghu",
+        //         "EmployId"     : 1022,
+        //         "OtherId"      : "No",
+        //         "DriversLicenseNumber"     : 23454325,
+        //         "LicenseExpiryDate"         : '01/01/2029',
+        //         "SSNNumber"            :     98767834647,
+        //         "SINNumber"            :     88765634366,
+        //         "DOB"         : '01/12/2001',
+        //         "MilitaryService"      : 'Yes'
+
+        //     }
+        //    const input_array = [input.first_Name,input.LastName,input.Nick_Name,input.EmployId
+        //                   ,input.OtherId,input.DriversLicenseNumber,input.LicenseExpiryDate,
+        //                   input.SSNNumber,input.SINNumber,
+        //                   input.DOB,input.MilitaryService]
+        //     if (i<1)
+        //     {
+                
+        //         info_page.getInput().then(($first_last)=>
+        //         {
+        //             cy.wrap($first_last).eq(i).should('be.visible').click().clear().type(input_array[i])
+        //             cy.wrap($first_last).eq(i+1).should('be.visible').click().clear().type(input_array[i+1])
+        //         })
+                
+        //     }
+        //     if (i==3)
+        //     {
+        //         j = i-1
+        //         k = j-1
+        //         info_page.getInput().then(($first_last)=>
+        //         {
+        //             cy.wrap($first_last).eq(k).should('be.visible').click().clear().type(input_array[i])
+        //             console.log(j)
+        //         })
+        //     }
+        // //     if (i> 0 <9)
+        // //     {
+        // //         j= i+1
+                
+        // //         info_page.getInput().should('be.visible').eq(j+1).click().clear().type(input_array[i])
+        // //     }
+        // //     else if (i == 9)
+        // //     {
+        // //         let k = 9
+        // //         info_page.getInput().should('be.visible').eq(k).click().clear().type(input_array[i])  
+        // //     }
+
+
+
+
+
+        
+    // Input fields
+    // const input = {
+    //             "first_Name" : "Raghvendra",
+    //              "Middle_Name"  : "Singh",
+    //             "LastName"     : "Chandel",
+    //             "Nick_Name"    : "Raghu",
+    //             "EmployId"     : 1022,
+    //             "OtherId"      : "No",
+    //             "DriversLicenseNumber"     : 23454325,
+    //             "LicenseExpiryDate"         : '2029-12-12',
+    //             "SSNNumber"            :     98767834647,
+    //             "SINNumber"            :     88765634366,
+    //             "DOB"         : '2001-01-12',
+    //             "MilitaryService"      : 'Yes'
+
+    //         }
+    //        const input_array = [input.first_Name,input.LastName,input.Nick_Name,input.EmployId
+    //                       ,input.OtherId,input.DriversLicenseNumber,input.LicenseExpiryDate,
+    //                       input.SSNNumber,input.SINNumber,
+    //                       input.DOB,input.MilitaryService]
+
+
+    //         for (let m = 0;m<=10;m++)
+    //         {
+    //             info_page.getInput().then(($first_last)=>
+    //            {
+    //               cy.wrap($first_last).eq(m).should('be.visible').click().clear().type(input_array[m])
+    //               if(m==9)
+    //               {
+    //                 cy.wrap($first_last).eq(m).click()
+    //               }
+    //            })
+    //         }
+            
+     // Other element
