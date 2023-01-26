@@ -23,7 +23,9 @@ Cypress.Commands.add('URL',()=>
 })
 
 
-
+/*
+   All element should be displayed in the login page
+*/
 
 Cypress.Commands.add('VerifyAllElementVisibleUnderLoginPage',()=>
 {
@@ -54,7 +56,9 @@ Cypress.Commands.add('VerifyAllElementVisibleUnderLoginPage',()=>
     })
 })
 
-
+/*
+    All the element should be worked properly (input field and Buttons)
+*/
 
 Cypress.Commands.add('VerifyfunctionalityOfLoginPage',()=>
 {   
@@ -69,6 +73,9 @@ Cypress.Commands.add('VerifyfunctionalityOfLoginPage',()=>
 
 })
 
+/*
+    Forget password link text should be worked properly
+*/
 
 Cypress.Commands.add('FunctionalityOfForgetPasswordLink',()=>
 {

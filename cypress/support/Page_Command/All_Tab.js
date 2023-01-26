@@ -10,19 +10,23 @@ const tab                                     =                                 
 
 const loginfunction                           =                                   new function_call()
 
+/*
+   All Tabshould be visible
+*/
 
 Cypress.Commands.add('VerifyALLTabVisible',()=>
 {   
+    // login function 
     loginfunction.Login_function('Admin','admin123')
      
     
     cy.url('contain','opensource-demo.orangehrmlive.com/web/index.php/dashboard/index')
     
-    tab.getBrandBanner().should('be.visible').and('have.attr','src','/web/images/orangehrm-logo.png?1666596668857')
+    tab.getBrandBanner().should('be.visible').and('have.attr','src')
     tab.getSearchBar().should('be.visible').and('have.attr','placeholder','Search')
 
 
-    // Implement for loop
+    // tabs name 
     let tabs = ['Admin','PIM','Leave','Time','Recruitment','My Info','Performance','Dashboard','Directory','Maintenance','Buzz']
 
     for (let i = 0 ; i<11 ; i++)

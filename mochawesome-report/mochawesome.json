@@ -1,0 +1,253 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-26T05:19:31.524Z",
+    "end": "2023-01-26T05:20:23.832Z",
+    "duration": 52308,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aa38fb33-d440-4b03-b26d-a073ecc65a32",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TestScript\\OrangeHRm.spec.js",
+      "file": "cypress\\e2e\\TestScript\\OrangeHRm.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f8937003-09dc-43c2-a437-c10bd502caac",
+          "title": "Login page functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify All element visible under Login page",
+              "fullTitle": "Login page functionality Verify All element visible under Login page",
+              "timedOut": null,
+              "duration": 4602,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VerifyAllElementVisibleUnderLoginPage();",
+              "err": {},
+              "uuid": "444c07a0-03e2-4859-8cd7-baf40c581ba0",
+              "parentUUID": "f8937003-09dc-43c2-a437-c10bd502caac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the functionality of Login page",
+              "fullTitle": "Login page functionality Verify the functionality of Login page",
+              "timedOut": null,
+              "duration": 4889,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VerifyfunctionalityOfLoginPage();",
+              "err": {},
+              "uuid": "18560968-e886-4f72-b595-f33140877fca",
+              "parentUUID": "f8937003-09dc-43c2-a437-c10bd502caac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the functionality of forget password link text",
+              "fullTitle": "Login page functionality Verify the functionality of forget password link text",
+              "timedOut": null,
+              "duration": 2105,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.FunctionalityOfForgetPasswordLink();",
+              "err": {},
+              "uuid": "4270cd3d-129f-4c5d-893d-77b2c19b7196",
+              "parentUUID": "f8937003-09dc-43c2-a437-c10bd502caac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify all element visible in the forget password page",
+              "fullTitle": "Login page functionality Verify all element visible in the forget password page",
+              "timedOut": null,
+              "duration": 2167,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VerifyAllElementPresentInForgetPasswordPage();",
+              "err": {},
+              "uuid": "70fc7c55-c77a-410c-afd2-462a614e67df",
+              "parentUUID": "f8937003-09dc-43c2-a437-c10bd502caac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify all tabs present on Home page",
+              "fullTitle": "Login page functionality Verify all tabs present on Home page",
+              "timedOut": null,
+              "duration": 3692,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VerifyALLTabVisible();",
+              "err": {},
+              "uuid": "eb1d3c3e-af37-40cd-a22b-66dd7e5642ac",
+              "parentUUID": "f8937003-09dc-43c2-a437-c10bd502caac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "444c07a0-03e2-4859-8cd7-baf40c581ba0",
+            "18560968-e886-4f72-b595-f33140877fca",
+            "4270cd3d-129f-4c5d-893d-77b2c19b7196",
+            "70fc7c55-c77a-410c-afd2-462a614e67df",
+            "eb1d3c3e-af37-40cd-a22b-66dd7e5642ac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17455,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c19e61b3-ae1b-423b-bc55-de1106917e1f",
+          "title": "Functionality of the My Info page element and page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify All tabs and Image is displayed on the My Info page",
+              "fullTitle": "Functionality of the My Info page element and page Verify All tabs and Image is displayed on the My Info page",
+              "timedOut": null,
+              "duration": 9271,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VerifyAllTabAndImageSectionInMyInfoPage();",
+              "err": {},
+              "uuid": "5f0e5015-bad3-46c7-94fa-b79b744771d3",
+              "parentUUID": "c19e61b3-ae1b-423b-bc55-de1106917e1f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify all elemet visible and its functional under personal detail page",
+              "fullTitle": "Functionality of the My Info page element and page Verify all elemet visible and its functional under personal detail page",
+              "timedOut": null,
+              "duration": 8341,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VerifyAllTitleAndLabelDisplayed();",
+              "err": {},
+              "uuid": "8b8fb2c1-0e1f-4b1d-961c-8eaf51de3e7a",
+              "parentUUID": "c19e61b3-ae1b-423b-bc55-de1106917e1f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify all input field and its functionality",
+              "fullTitle": "Functionality of the My Info page element and page Verify all input field and its functionality",
+              "timedOut": null,
+              "duration": 14768,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// first, middle, last name\ncy.VerifFunctionalityofInputNamefield();\n// Employ detail field\ncy.VerifyFunctionalityOfEmployedDetail();\n// functionality of DOB\ncy.VerifyFunctionalityOfDOB();\n// Other details of the Employe\ncy.VerifyFunctionalityOfOtherDetails();",
+              "err": {},
+              "uuid": "94741155-bb4d-40a2-b888-a266107a0074",
+              "parentUUID": "c19e61b3-ae1b-423b-bc55-de1106917e1f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5f0e5015-bad3-46c7-94fa-b79b744771d3",
+            "8b8fb2c1-0e1f-4b1d-961c-8eaf51de3e7a",
+            "94741155-bb4d-40a2-b888-a266107a0074"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32380,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
