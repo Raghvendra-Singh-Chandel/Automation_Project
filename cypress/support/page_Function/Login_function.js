@@ -8,6 +8,9 @@ const login      = new Login_Page()
 
 class function_call
 {
+    /*
+    Handle the login function for positive and negative testing
+    */
      Login_function(username,password)
     {
         login.getUserInput().then(($Username)=>

@@ -19,10 +19,7 @@ class All_Tab_Displayed
     {
         return cy.get('.oxd-main-menu').eq(1).find('li')
     }
-    // getAllTab()
-    // {
-    //     return cy.find('li')
-    // }
+    
     getIconAlltab()
     {
         return cy.find('svg')

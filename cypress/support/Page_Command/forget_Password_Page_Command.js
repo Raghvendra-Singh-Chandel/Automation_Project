@@ -9,7 +9,9 @@ import forget_Password from "../Page_Method/forgetPassword_Page"
 const frgtpass             =            new forget_Password()
 
 
-
+/*
+    All Element should be displayed in the forget Password page 
+*/
 
 
 Cypress.Commands.add('VerifyAllElementPresentInForgetPasswordPage',()=>
