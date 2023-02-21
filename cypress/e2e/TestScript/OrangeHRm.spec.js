@@ -57,7 +57,7 @@ describe ('Login page functionality',{tags: ['smoke','regression']},()=>
     })
 
 })
-describe('Functionality of the My Info page element and page',()=>
+describe('Functionality of the My Info page element',()=>
 {
     beforeEach(()=>
     {
@@ -65,7 +65,8 @@ describe('Functionality of the My Info page element and page',()=>
 /*
     run before every it block to get Login and Click on MyInfo Tab
 */
-
+        
+        
         cy.Login()
         cy.MyInfoTab()
     })
