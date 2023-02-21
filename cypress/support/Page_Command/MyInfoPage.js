@@ -19,7 +19,7 @@ const myInfotab                               =                         new All_
 
 const login                                   =                         new Login_Page()
 
-// Login nctionality Command
+// Login functionality Command
 
 Cypress.Commands.add('Login',()=>
 {
@@ -159,5 +159,11 @@ Cypress.Commands.add('VerifyAllTitleAndLabelDisplayed',()=>
         {
             cy.wrap($OtherDetail).find('.oxd-input--active').should('be.visible').click().clear().type('Yes')
         })
+
+        info_page.getSmokerCheckbox().first().click()
+
+        info_page.getSaveButton().first().should('be.visible').and('have.text',' Save ').click()
     })
+
+
 

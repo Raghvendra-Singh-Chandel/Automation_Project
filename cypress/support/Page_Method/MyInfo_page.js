@@ -41,6 +41,19 @@ class Myinfo
     {
         return cy.get('.oxd-select-text--active')
     }
+    getSmokerCheckbox()
+    {
+        return cy.get('.bi-check')
+    }
+
+    getSaveButton()
+    {
+        return cy.get('button[type="submit"]')
+    }
+    getAddButton()
+    {
+        return cy.get('.bi-plus')
+    }
 
 
 }
