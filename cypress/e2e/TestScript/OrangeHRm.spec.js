@@ -2,91 +2,79 @@
 
 
 
-describe ('Login page functionality',{tags: ['smoke','regression']},()=>
-{
-    beforeEach(()=>
-    {
+describe('Login page functionality', { tags: ['smoke', 'regression'] }, () => {
+    beforeEach(() => {
         /*
         run before every it block to get the url of the login page
         */
         cy.URL()
     })
-/*
-     Element should be visible under  login page
-*/
+    /*
+         Element should be visible under  login page
+    */
 
-    it ('Verify All element visible under Login page',()=>
-    {
-        cy.VerifyAllElementVisibleUnderLoginPage()
+    it('Verify All element visible under Login page', () => {
+        cy.verifyAllElementVisibleUnderLoginPage()
     })
 
-/*
-    Element under Login page should be worked properly
-*/
+    /*
+        Element under Login page should be worked properly
+    */
 
-    it ('Verify the functionality of Login page',{tags:['smoke','regression']},()=>
-    {
-        cy.VerifyfunctionalityOfLoginPage()
+    it('Verify the functionality of Login page', { tags: ['smoke', 'regression'] }, () => {
+        cy.verifyFunctionalityOfLoginPage()
     })
 
-/*
-    forget link text should be worked properly
-*/
+    /*
+        forget link text should be worked properly
+    */
 
-    it ('Verify the functionality of forget password link text',{tags:['smoke','regression']},()=>
-    {
-        cy.FunctionalityOfForgetPasswordLink()
+    it('Verify the functionality of forget password link text', { tags: ['smoke', 'regression'] }, () => {
+        cy.functionalityOfForgetPasswordLink()
     })
 
-/*
-    All element should be visible under forget
-*/
+    /*
+        All element should be visible under forget
+    */
 
-    it ('Verify all element visible in the forget password page',{tags:'regression'},()=>
-    {
-        cy.VerifyAllElementPresentInForgetPasswordPage()
+    it('Verify all element visible in the forget password page', { tags: 'regression' }, () => {
+        cy.verifyAllElementPresentInForgetPasswordPage()
     })
 
-/*
-    All tabs should be visible on Home page
-*/
+    /*
+        All tabs should be visible on Home page
+    */
 
-    it('Verify all tabs present on Home page',{tags:['smoke','regression']},()=>
-    {
-        cy.VerifyALLTabVisible()
+    it('Verify all tabs present on Home page', { tags: ['smoke', 'regression'] }, () => {
+        cy.verifyAllTabVisible()
     })
 
 })
-describe('Functionality of the My Info page element',()=>
-{
-    beforeEach(()=>
-    {
+describe('Functionality of the My Info page element', () => {
+    beforeEach(() => {
 
-/*
-    run before every it block to get Login and Click on MyInfo Tab
-*/
-        
-        
+        /*
+            run before every it block to get Login and Click on MyInfo Tab
+        */
+
+
         cy.Login()
         cy.MyInfoTab()
     })
-    it ('Verify All tabs and Image is displayed on the My Info page',()=>
-    {
-        cy.VerifyAllTabAndImageSectionInMyInfoPage()
+    it('Verify All tabs and Image is displayed on the My Info page', () => {
+        cy.verifyAllTabsAndImageSectionInMyInfoPage()
     })
-    it('Verify all elemet visible and its functional under personal detail page',()=>
-    {
-        cy.VerifyAllTitleAndLabelDisplayed()
+    it('Verify all elemet visible and its functional under personal detail page', () => {
+        cy.verifyAllTitleAndLabelDisplayed()
     })
-    it ('Verify all input field and its functionality',()=>
-    {
+    it('Verify all input field and its functionality', () => {
         // first, middle, last name
-        cy.VerifFunctionalityofInputNamefield()
+        cy.verifFunctionalityofInputNamefield()
         // Employ detail field
-        cy.VerifyFunctionalityOfEmployedDetail()
+        cy.verifyFunctionalityOfEmployedDetail()
         // functionality of DOB
-        cy.VerifyFunctionalityOfDOB()
+        cy.verifyFunctionalityOfDOB()
         // Other details of the Employe
-        cy.VerifyFunctionalityOfOtherDetails()
+        cy.verifyFunctionalityOfOtherDetails()
     })
 })

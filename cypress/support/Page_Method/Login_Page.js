@@ -1,51 +1,39 @@
 /// <reference types="cypress" />
 
-class Login_Page
-{
-    getUrl()
-    {
+class Login_Page {
+    getUrl() {
         return cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    }
-    getLogoComapnyBranding()
-    {
+    };
+    getLogoComapnyBranding() {
         return cy.get('img').first()
-    }
-    getLogo()
-    {
+    };
+    getLogo() {
         return cy.get('img').eq(2)
-    }
-    getTitle()
-    {
-       return cy.get('.orangehrm-login-title')
-    }
-    getUserName()
-    {
-       return cy.get('.oxd-label').first()
-    }
-    getUserInput()
-    {
+    };
+    getTitle() {
+        return cy.get('.orangehrm-login-title')
+    };
+    getUserName() {
+        return cy.get('.oxd-label').first()
+    };
+    getUserInput() {
         return cy.get('.oxd-input').first()
-    }
-    getPassword()
-    {
+    };
+    getPassword() {
         return cy.get('.oxd-label').eq(1)
-    }
-    getPasswordInput()
-    {
+    };
+    getPasswordInput() {
         return cy.get('.oxd-input[name=password]')
-    }
-    getLoginButton()
-    {
+    };
+    getLoginButton() {
         return cy.get('.oxd-button')
-    }
-    getForgetPassword()
-    {
+    };
+    getForgetPassword() {
         return cy.get('.orangehrm-login-forgot')
-    }
-    getAlertInvalidCredentials()
-    {
+    };
+    getAlertInvalidCredentials() {
         return cy.get('.oxd-alert-content-text')
-    }
+    };
 }
 
 export default Login_Page 

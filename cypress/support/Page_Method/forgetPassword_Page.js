@@ -1,38 +1,29 @@
 /// <reference types = "Cypress"/>
 
-class forget_Password
-{
-    getForgetPasswordpage()
-    {
+class forget_Password {
+    getForgetPasswordpage() {
         return cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode')
-    }
-    getForm()
-    {
+    };
+    getForm() {
         return cy.get('.oxd-form')
-    }
-    getTitle()
-    {
+    };
+    getTitle() {
         return cy.get('.orangehrm-forgot-password-title')
-    }
-    getForgetNote()
-    {
+    };
+    getForgetNote() {
         return cy.get('.orangehrm-forgot-password-card-note')
-    }
-    getUsername()
-    {
+    };
+    getUsername() {
         return cy.get('.oxd-label')
-    }
-    getUserInput()
-    {
+    };
+    getUserInput() {
         return cy.get('.oxd-input')
-    }
-    getCancelBtn()
-    {
+    };
+    getCancelBtn() {
         return cy.get('.orangehrm-forgot-password-button--cancel')
-    }
-    getResetPassBtn()
-    {
+    };
+    getResetPassBtn() {
         return cy.get('.orangehrm-forgot-password-button--reset')
-    }
-}
+    };
+};
 export default forget_Password

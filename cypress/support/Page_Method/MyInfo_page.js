@@ -1,60 +1,47 @@
 
 /// <reference types = "Cypress"/>
 
-class Myinfo 
-{
-   
-    getEmployedImage()
-    {
+class Myinfo {
+
+    getEmployedImage() {
         return cy.get('.employee-image')
-    }
-    getTabList()
-    {
+    };
+    getTabList() {
         return cy.get('div [role = "tablist"]').find('[role = tab]')
-    }
-    getMainTitle()
-    {
+    };
+    getMainTitle() {
         return cy.get('.orangehrm-main-title')
-    }
-    getCustomFields()
-    {
+    };
+    getCustomFields() {
         return cy.get('div .orangehrm-custom-fields')
-    }
-    getFormEmployedDetail()
-    {
-       return cy.get('form .oxd-form-row')
-    }
-    getLabel()
-    {
-       return cy.get('.oxd-label')
-    }
-  
-    getInput()
-    {
+    };
+    getFormEmployedDetail() {
+        return cy.get('form .oxd-form-row')
+    };
+    getLabel() {
+        return cy.get('.oxd-label')
+    };
+
+    getInput() {
         return cy.get('form .oxd-form-row').find('.oxd-input--active')
-    }
-    getGender()
-    {
+    };
+    getGender() {
         return cy.get('.--gender-grouped-field')
-    }
-    getDropdown()
-    {
+    };
+    getDropdown() {
         return cy.get('.oxd-select-text--active')
-    }
-    getSmokerCheckbox()
-    {
+    };
+    getSmokerCheckbox() {
         return cy.get('.bi-check')
-    }
+    };
 
-    getSaveButton()
-    {
+    getSaveButton() {
         return cy.get('button[type="submit"]')
-    }
-    getAddButton()
-    {
+    };
+    getAddButton() {
         return cy.get('.bi-plus')
-    }
+    };
 
 
-}
+};
 export default Myinfo
