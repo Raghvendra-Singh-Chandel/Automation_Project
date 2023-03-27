@@ -1,40 +1,31 @@
 /// <reference types = "Cypress"/>
 
-import Login_Page from "../Page_Method/Login_Page"
+import Login_Page from "../Page_Method/Login_Page";
 
 
-const login      = new Login_Page()
+const login = new Login_Page();
 
 
-class function_call
-{
+class function_call {
     /*
     Handle the login function for positive and negative testing
     */
-     Login_function(username,password)
-    {
-        login.getUserInput().then(($Username)=>
-        {
-            if($Username.is(':visible'))
-            {
+    Login_function(username, password) {
+        login.getUserInput().then(($Username) => {
+            if ($Username.is(':visible')) {
                 cy.wrap($Username).click().type(username)
             }
-        })
-        login.getPasswordInput().then(($Password)=>
-        {
-            if($Password.is(':visible'))
-            {
+        });
+        login.getPasswordInput().then(($Password) => {
+            if ($Password.is(':visible')) {
                 cy.wrap($Password).click().type(password)
             }
-        })
-        login.getLoginButton().then(($LoginBtn)=>
-        {
-            if($LoginBtn.is(':visible'))
-            {
+        });
+        login.getLoginButton().then(($LoginBtn) => {
+            if ($LoginBtn.is(':visible')) {
                 cy.wrap($LoginBtn).click()
             }
-        })
+        });
     }
-}
-
+};
 export default function_call
