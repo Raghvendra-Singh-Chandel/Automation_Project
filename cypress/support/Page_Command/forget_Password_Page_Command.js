@@ -15,7 +15,7 @@ const frgtpass = new forget_Password();
 
 
 Cypress.Commands.add('verifyAllElementPresentInForgetPasswordPage', () => {
-    frgtpass.getForgetPasswordpage().url('contain', 'requestPasswordResetCode')
+    frgtpass.getForgetPasswordPage().url('contain', 'requestPasswordResetCode')
     frgtpass.getTitle().then(($TitleText) => {
         expect($TitleText.text()).to.be.deep.equal('Reset Password')
     });

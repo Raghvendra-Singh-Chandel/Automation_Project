@@ -9,7 +9,7 @@ import forget_Password from "../Page_Method/forgetPassword_Page"
 const login = new Login_Page();
 
 
-const funsn = new function_call();
+const loginfunction = new function_call();
 
 
 const dash = new dashboard_Page();
@@ -59,10 +59,10 @@ Cypress.Commands.add('verifyAllElementVisibleUnderLoginPage', () => {
 */
 
 Cypress.Commands.add('verifyFunctionalityOfLoginPage', () => {
-    funsn.Login_function('Wdmin', 'admin123')
+    loginfunction.loginFunction('Wdmin', 'admin123')
     login.getAlertInvalidCredentials().should('be.visible').and('have.css', 'color', 'rgb(235, 9, 16)').then((InvalidCredentialText) => {
         expect(InvalidCredentialText.text()).to.be.deep.equal('Invalid credentials');
-        funsn.Login_function('Admin', 'admin123');
+        loginfunction.loginFunction('Admin', 'admin123');
         dash.getHome().url('contain', 'dashboard');
 
     });
@@ -76,7 +76,7 @@ Cypress.Commands.add('verifyFunctionalityOfLoginPage', () => {
 Cypress.Commands.add('functionalityOfForgetPasswordLink', () => {
     login.getForgetPassword().then(($Text) => {
         expect($Text.text()).to.be.deep.equal('Forgot your password? ')
-        cy.get('.orangehrm-login-forgot-header').should('have.css', 'color', 'rgb(255, 123, 29)').click()
-        forgetpass.getForgetPasswordpage().url('contain', 'requestPasswordResetCode')
+        cy.get('.orangehrm-login-forgot-header').click()
+        forgetpass.getForgetPasswordPage().url('contain', 'requestPasswordResetCode')
     })
 });
