@@ -1,14 +1,14 @@
 /// <reference types = "Cypress"/>
 
 import All_Tab_Displayed from "../Page_Method/allTabDisplayed";
-import function_call from "../page_Function/Login_function";
+import loginFunctionCall from "../page_Function/Login_function";
 
 
 
 const tab = new All_Tab_Displayed();
 
 
-const loginfunction = new function_call();
+const loginfunction = new loginFunctionCall();
 
 /*
    All Tabshould be visible
@@ -16,7 +16,7 @@ const loginfunction = new function_call();
 
 Cypress.Commands.add('verifyAllTabVisible', () => {
     // login function 
-    loginfunction.Login_function('Admin', 'admin123');
+    loginfunction.loginFunction('Admin', 'admin123');
 
 
     cy.url('contain', 'opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');

@@ -6,11 +6,11 @@ import Login_Page from "../Page_Method/Login_Page";
 const login = new Login_Page();
 
 
-class function_call {
+class loginFunctionCall {
     /*
     Handle the login function for positive and negative testing
     */
-    Login_function(username, password) {
+    loginFunction(username, password) {
         login.getUserInput().then(($Username) => {
             if ($Username.is(':visible')) {
                 cy.wrap($Username).click().type(username)
@@ -28,4 +28,4 @@ class function_call {
         });
     }
 };
-export default function_call
+export default loginFunctionCall

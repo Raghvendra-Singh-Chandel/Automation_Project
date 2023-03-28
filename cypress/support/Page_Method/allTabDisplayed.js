@@ -15,7 +15,7 @@ class All_Tab_Displayed {
         return cy.get('.oxd-main-menu').eq(1).find('li')
     };
 
-    getIconAlltab() {
+    getIconAllTab() {
         return cy.find('svg')
     };
 };

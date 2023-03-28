@@ -1,6 +1,6 @@
 /// <reference types = "Cypress"/>
 import Myinfo from "../Page_Method/MyInfo_page";
-import function_call from "../page_Function/Login_function";
+import loginFunctionCall from "../page_Function/Login_function";
 import All_Tab_Displayed from "../Page_Method/allTabDisplayed";
 import Login_Page from "../Page_Method/Login_Page";
 
@@ -9,7 +9,7 @@ import Login_Page from "../Page_Method/Login_Page";
 const info_page = new Myinfo();
 
 
-const loginfunction = new function_call();
+const loginfunction = new loginFunctionCall();
 
 
 
@@ -22,8 +22,11 @@ const login = new Login_Page();
 // Login functionality Command
 
 Cypress.Commands.add('Login', () => {
-    login.getUrl()
-    loginfunction.Login_function('Admin', 'admin123')
+    
+    
+        login.getUrl()
+        loginfunction.loginFunction('Admin', 'admin123')
+    // loginfunction.Login_function('Admin', 'admin123')
 });
 
 
