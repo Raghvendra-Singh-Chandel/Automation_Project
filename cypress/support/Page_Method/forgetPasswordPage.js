@@ -1,6 +1,6 @@
 /// <reference types = "Cypress"/>
 
-class forget_Password {
+class forgetPassword {
     getForgetPasswordPage() {
         return cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode')
     };
@@ -26,4 +26,4 @@ class forget_Password {
         return cy.get('.orangehrm-forgot-password-button--reset')
     };
 };
-export default forget_Password
+export default forgetPassword

@@ -1,9 +1,9 @@
 /// <reference types = "Cypress"/>
 
-import Login_Page from "../Page_Method/Login_Page";
+import loginPage from "../Page_Method/loginPage";
 
 
-const login = new Login_Page();
+const login = new loginPage();
 
 
 class loginFunctionCall {

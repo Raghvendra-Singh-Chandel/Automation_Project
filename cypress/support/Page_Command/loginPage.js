@@ -1,21 +1,21 @@
 /// <reference types = "Cypress"/>
 
-import Login_Page from "../Page_Method/Login_Page"
-import function_call from "../page_Function/Login_function"
-import dashboard_Page from "../Page_Method/allTabDisplayed"
-import forget_Password from "../Page_Method/forgetPassword_Page"
+import loginPage from "../Page_Method/loginPage"
+import loginFunctionCall from "../page_Function/loginFunction"
+import allTabsDisplayed from "../Page_Method/allTabDisplayed"
+import forgetPassword from "../Page_Method/forgetPasswordPage"
 
 
-const login = new Login_Page();
+const login = new loginPage();
 
 
-const loginfunction = new function_call();
+const loginfunction = new loginFunctionCall();
 
 
-const dash = new dashboard_Page();
+const dash = new allTabsDisplayed();
 
 
-const forgetpass = new forget_Password();
+const forgetpass = new forgetPassword();
 
 Cypress.Commands.add('URL', () => {
     login.getUrl()

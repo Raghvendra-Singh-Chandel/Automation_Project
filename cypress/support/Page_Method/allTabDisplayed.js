@@ -1,6 +1,6 @@
 /// <reference types = "Cypress"/>
 
-class All_Tab_Displayed {
+class allTabsDisplayed {
     getHome() {
         return cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index')
 
@@ -19,4 +19,4 @@ class All_Tab_Displayed {
         return cy.find('svg')
     };
 };
-export default All_Tab_Displayed
+export default allTabsDisplayed
