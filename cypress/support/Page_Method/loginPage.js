@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-class Login_Page {
+class loginPage {
     getUrl() {
         return cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     };
@@ -36,4 +36,4 @@ class Login_Page {
     };
 }
 
-export default Login_Page 
+export default loginPage 

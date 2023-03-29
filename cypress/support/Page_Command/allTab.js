@@ -1,11 +1,11 @@
 /// <reference types = "Cypress"/>
 
-import All_Tab_Displayed from "../Page_Method/allTabDisplayed";
-import loginFunctionCall from "../page_Function/Login_function";
+import allTabsDisplayed from "../Page_Method/allTabDisplayed";
+import loginFunctionCall from "../page_Function/loginFunction";
 
 
 
-const tab = new All_Tab_Displayed();
+const tab = new allTabsDisplayed();
 
 
 const loginfunction = new loginFunctionCall();

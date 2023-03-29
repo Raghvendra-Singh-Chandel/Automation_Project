@@ -2,11 +2,11 @@
 
 
 
-import forget_Password from "../Page_Method/forgetPassword_Page";
+import forgetPassword from "../Page_Method/forgetPasswordPage";
 
 
 
-const frgtpass = new forget_Password();
+const frgtpass = new forgetPassword();
 
 
 /*
