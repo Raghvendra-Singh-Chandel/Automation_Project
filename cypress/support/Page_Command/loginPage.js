@@ -58,7 +58,7 @@ Cypress.Commands.add('verifyAllElementVisibleUnderLoginPage', () => {
     All the element should be worked properly (input field and Buttons)
 */
 
-Cypress.Commands.add('verifyFunctionalityOfLoginPage', () => {
+Cypress.Commands.add('verifyFunctionalityOfLoginPageWithInvalidCredential', () => {
     loginfunction.loginFunction('Wdmin', 'admin123')
     login.getAlertInvalidCredentials().should('be.visible').and('have.css', 'color', 'rgb(235, 9, 16)').then((InvalidCredentialText) => {
         expect(InvalidCredentialText.text()).to.be.deep.equal('Invalid credentials');
@@ -68,6 +68,36 @@ Cypress.Commands.add('verifyFunctionalityOfLoginPage', () => {
     });
 
 });
+
+Cypress.Commands.add('verifyFunctionalityOfLoginPageWithValidCredential', (username,password) => {
+    loginfunction.loginFunction('Admin', 'admin123');
+    dash.getHome().url('contain', 'dashboard'); 
+})
+
+Cypress.Commands.add('loginSession', (username,password) => {
+    cy.session('login',()=> {
+
+        login.getUrl()
+        login.getUserInput().then(($Username) => {
+            if ($Username.is(':visible')) {
+                cy.wrap($Username).click().type(username)
+            }
+        });
+        login.getPasswordInput().then(($Password) => {
+            if ($Password.is(':visible')) {
+                cy.wrap($Password).click().type(password)
+            }
+        });
+        login.getLoginButton().then(($LoginBtn) => {
+            if ($LoginBtn.is(':visible')) {
+                cy.wrap($LoginBtn).click()
+            }
+        });
+        dash.getHome().url('contain', 'dashboard');
+        
+
+    })   
+})
 
 /*
     Forget password link text should be worked properly
