@@ -21,8 +21,12 @@ describe('Login page functionality', { tags: ['smoke', 'regression'] }, () => {
         Element under Login page should be worked properly
     */
 
-    it('Verify the functionality of Login page', { tags: ['smoke', 'regression'] }, () => {
-        cy.verifyFunctionalityOfLoginPage()
+    it('Verify the functionality of Login page with invalid credential', { tags: ['smoke', 'regression'] }, () => {
+        cy.verifyFunctionalityOfLoginPageWithInvalidCredential()
+    })
+
+    it('Verify the functionality of the login page with valid Credentials', { tag: ['smoke', 'regression'] }, () => {
+          cy.verifyFunctionalityOfLoginPageWithValidCredential()
     })
 
     /*
@@ -58,7 +62,7 @@ describe('Functionality of the My Info page element', () => {
         */
 
 
-        cy.Login()
+        cy.loginSession('Admin','admin123')
         cy.MyInfoTab()
     })
     it('Verify All tabs and Image is displayed on the My Info page', () => {
