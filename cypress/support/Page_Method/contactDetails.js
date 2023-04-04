@@ -83,6 +83,23 @@ class contactDetails {
         return cy.get('.oxd-toast')
     }
 
+    getTableHeader() {
+        return cy.get('.oxd-table .oxd-table-header')
+    }
+
+    getTableBodyColumn() {
+        return cy.get('.oxd-table-body .oxd-padding-cell')
+    }
+
+    getDeleteSelectedRecord() {
+        return cy.get('.oxd-button--label-danger')
+    }
+
+    getDeleteAllRecords() {
+        return cy.get('.oxd-table .oxd-table-header').find('.oxd-table-th').first()
+    }
+
+
 
 }
 
