@@ -80,11 +80,11 @@ Cypress.Commands.add('verifyEmailDetailsSection',()=> {
 
 Cypress.Commands.add('savedTheDetails',()=> {
     details.getSaveFormButton().first().click({force:true})
-    // details.getToastSuccessMessage().then(($toast)=> {
-    //     expect($toast).to.have.css({'background-color':'#84d225'})
-    //     cy.wrap($toast).find('.oxd-text--toast-title').invoke('text').should('deep.equal','Success')
-    //     cy.wrap($toast).find('.oxd-text--toast-message').invoke('text').should('deep.equal','Successfully Saved')
-    // })
+    details.getToastSuccessMessage().then(($toast)=> {
+        expect($toast).to.have.css({'background-color':'#84d225'})
+        cy.wrap($toast).find('.oxd-text--toast-title').invoke('text').should('deep.equal','Success')
+        cy.wrap($toast).find('.oxd-text--toast-message').invoke('text').should('deep.equal','Successfully Saved')
+    })
 })
 
 Cypress.Commands.add('verifyTheAttachmentSection',()=> {
@@ -98,11 +98,48 @@ Cypress.Commands.add('verifyTheAttachmentSection',()=> {
     details.getUploadAttachment().attachFile('demo.1.jpg')
     details.getUploadAttachment().selectFile('cypress/fixtures/demo.1.jpg',{force:true})
     details.getSaveAttachmentButton().should('contain',' Save ').click()
+    details.getToastSuccessMessage().then(($toast)=> {
+        expect($toast).to.have.css({'background-color':'#84d225'})
+        cy.wrap($toast).find('.oxd-text--toast-title').invoke('text').should('deep.equal','Success' || 'success')
+        cy.wrap($toast).find('.oxd-text--toast-message').invoke('text').should('deep.equal','Successfully Saved')
+       
+    })
+    
+});
+
+
+Cypress.Commands.add('verifyAllTheColumnPresentInTableHeader',()=> {
+    details.getTableHeader().find('.oxd-table-th').then(($tableHeader)=> {
+        expect($tableHeader).to.have.length('8')
+        expect($tableHeader.first().children()).to.have.class('oxd-checkbox-wrapper')
+        let columnName = ['File Name','Description','Size','Type','Date Added','Added By','Actions']
+        for (let colName = 1; colName<8; colName++){
+            cy.wrap($tableHeader).eq(colName).invoke('text').should('deep.equal',columnName[colName-1])
+            
+        }
+
+    });
+
+    details.getTableBodyColumn().first().click()
+    details.getDeleteSelectedRecord().should('have.text',' Delete Selected ').click({force:true})
+    details.getDeleteSelectedRecord().eq(1).should('have.text',' Yes, Delete ').click()
+    details.getToastSuccessMessage().then(($toast)=> {
+        expect($toast).to.have.css({'background-color':'#84d225'})
+        cy.wrap($toast).find('.oxd-text--toast-title').invoke('text').should('deep.equal','Success' || 'success')
+        cy.wrap($toast).find('.oxd-text--toast-message').invoke('text').should('deep.equal','Successfully Deleted')
+       
+    })
+
+    /* code to delete all the records*/
+    // details.getDeleteAllRecords().click()
+    // details.getDeleteSelectedRecord().should('have.text',' Delete Selected ').click({force:true})
+    // details.getDeleteSelectedRecord().eq(1).should('have.text',' Yes, Delete ').click()
     // details.getToastSuccessMessage().then(($toast)=> {
     //     expect($toast).to.have.css({'background-color':'#84d225'})
     //     cy.wrap($toast).find('.oxd-text--toast-title').invoke('text').should('deep.equal','Success' || 'success')
-    //     cy.wrap($toast).find('.oxd-text--toast-message').invoke('text').should('deep.equal','Successfully Saved')
+    //     cy.wrap($toast).find('.oxd-text--toast-message').invoke('text').should('deep.equal','Successfully Deleted')
        
     // })
     
-})    
+
+});

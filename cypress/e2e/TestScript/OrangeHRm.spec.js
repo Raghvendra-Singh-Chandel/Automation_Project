@@ -119,4 +119,12 @@ describe('verify Contact details page functionality', () => {
     //     cy.verifyTheAttachmentSection()
     // })
     // })
+
+    it.only('Verify the functionality of the tabe header',()=> {
+        cy.verifyTheAttachmentSection()
+        cy.verifyAllTheColumnPresentInTableHeader()
+       
+    })
+
+
 })
