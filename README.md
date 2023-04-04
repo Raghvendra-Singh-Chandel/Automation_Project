@@ -1,2 +1,2 @@
-# Automation_Project
-Dummy_Project Using Cypress framework
+# Automation_Cypress_Project
+Dummy_Project(OrangeHRM) Using Cypress framework
