@@ -19,5 +19,6 @@ import './Page_Command/loginPage';
 import './Page_Command/forgetPasswordPage';
 import './Page_Command/allTab';
 import './Page_Command/myInfoPage';
+import './Page_Command/contactDetailsPageCommand'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
