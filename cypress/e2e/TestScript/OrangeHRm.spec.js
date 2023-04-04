@@ -26,7 +26,7 @@ describe('Login page functionality', { tags: ['smoke', 'regression'] }, () => {
     })
 
     it('Verify the functionality of the login page with valid Credentials', { tag: ['smoke', 'regression'] }, () => {
-          cy.verifyFunctionalityOfLoginPageWithValidCredential()
+        cy.verifyFunctionalityOfLoginPageWithValidCredential()
     })
 
     /*
@@ -62,7 +62,7 @@ describe('Functionality of the My Info page element', () => {
         */
 
 
-        cy.loginSession('Admin','admin123')
+        cy.loginSession('Admin', 'admin123')
         cy.MyInfoTab()
     })
     it('Verify All tabs and Image is displayed on the My Info page', () => {
@@ -81,4 +81,42 @@ describe('Functionality of the My Info page element', () => {
         // Other details of the Employe
         cy.verifyFunctionalityOfOtherDetails()
     })
+})
+
+describe('verify Contact details page functionality', () => {
+    beforeEach(() => {
+        cy.loginSession('Admin', 'admin123')
+        cy.contactDetailstab()
+        
+    })
+
+    it('Verify the Contact Details Page functionality End-to-End Testing', () => {
+        cy.verifyMainTitlesHeading()
+        cy.verifyAddressDetailsSection()
+        cy.verifyTelephoneDetailsSection()
+        cy.verifyEmailDetailsSection()
+        cy.verifyTheAttachmentSection()
+        cy.savedTheDetails()
+
+    })
+    // it('Verify the contact details page main title', () => {
+    //     cy.verifyMainTitlesHeading()
+    // })
+
+    // it('Verify the adress section in Contact Details Page',()=> {
+    //     cy.verifyAddressDetailsSection()
+    // })
+
+    // it('verify the details of the Telephone fields',() => {
+    //     cy.verifyTelephoneDetailsSection()
+    // })
+
+    // it('Verify the Email Section Incontact Fields',()=> {
+    //     cy.verifyEmailDetailsSection()
+    // })
+
+    // it('Verify the functionality of the attachment section',()=> {
+    //     cy.verifyTheAttachmentSection()
+    // })
+    // })
 })

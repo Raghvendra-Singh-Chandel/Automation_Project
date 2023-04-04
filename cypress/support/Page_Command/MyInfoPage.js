@@ -1,8 +1,8 @@
 /// <reference types = "Cypress"/>
-import Myinfo from "../Page_Method/MyInfo_page";
-import loginFunctionCall from "../page_Function/Login_function";
-import All_Tab_Displayed from "../Page_Method/allTabDisplayed";
-import Login_Page from "../Page_Method/Login_Page";
+import Myinfo from "../Page_Method/myInfoPage";
+import loginFunctionCall from "../page_Function/loginFunction";
+import allTabDisplayed from "../Page_Method/allTabDisplayed";
+import loginPage from "../Page_Method/loginPage";
 
 
 
@@ -13,26 +13,19 @@ const loginfunction = new loginFunctionCall();
 
 
 
-const myInfotab = new All_Tab_Displayed();
+const myInfotab = new allTabDisplayed();
 
 
 
-const login = new Login_Page();
+const login = new loginPage();
 
 // Login functionality Command
-
-Cypress.Commands.add('Login', () => {
-    
-    
-        login.getUrl()
-        loginfunction.loginFunction('Admin', 'admin123')
-    // loginfunction.Login_function('Admin', 'admin123')
-});
 
 
 // My Info tab Click functionality
 
 Cypress.Commands.add('MyInfoTab', () => {
+    login.getUrl()
     myInfotab.getMainMenu().then(($AllTab) => {
         cy.wrap($AllTab).eq(5).then(($MyInfo) => {
             expect($MyInfo.text()).to.be.deep.equal('My Info')
